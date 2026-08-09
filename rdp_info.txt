@@ -1,4 +1,11 @@
-IP/Host: bore.pub
-Port: 43699
-Username: admin
-Password: WindowsRDP2026@
+=======================================================
+RDP INFO - Uki Edition
+=======================================================
+FULL ADDRESS   : bore.pub:4560
+PORT           : 4560
+HOST           : bore.pub
+-------------------------------------------------------
+Username       : admin
+Password       : WindowsRDP2026@
+Created        : 19:22:13 09/08/2026
+=======================================================
