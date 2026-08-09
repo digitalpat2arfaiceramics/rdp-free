@@ -1,0 +1,4 @@
+IP/Host: bore.pub
+Port: 43699
+Username: admin
+Password: WindowsRDP2026@
