@@ -2,6 +2,8 @@ name: RDP Windows VPS (Bore)
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '0 */5 * * *' # Otomatis run ulang setiap 5 jam
 
 concurrency:
   group: vps-bore-runner
