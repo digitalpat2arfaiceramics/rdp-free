@@ -62,7 +62,21 @@ jobs:
                       
                       if (Test-Path "rdp_info.txt") { Remove-Item "rdp_info.txt" -Force }
 
-                      $report = "IP/Host: bore.pub`r`nPort: $portOnly`r`nUsername: $USER`r`nPassword: $PASS"
+                      $createdAt = (Get-Date).ToString('HH:mm:ss dd/MM/yyyy')
+                      $reportLines = @(
+                        '=======================================================',
+                        'RDP INFO - Uki Edition',
+                        '=======================================================',
+                        "FULL ADDRESS   : bore.pub:$portOnly",
+                        "PORT           : $portOnly",
+                        'HOST           : bore.pub',
+                        '-------------------------------------------------------',
+                        "Username       : $USER",
+                        "Password       : $PASS",
+                        "Created        : $createdAt",
+                        '======================================================='
+                      )
+                      $report = ($reportLines -join "`r`n")
                       [System.IO.File]::WriteAllText("$(Get-Location)\rdp_info.txt", $report)
                       
                       git checkout main
